@@ -1,0 +1,16 @@
+{{ define "content" }}
+    <h2>{{ .Heading }}</h2>
+    <p>This is a demo of HTMX and go templates</p>
+
+    <button
+        hx-get="/time"
+        hx-target="#current-time"
+        hx-swap="innerHTML"
+    >
+        Get current server time
+    </button>
+
+    <div id="current-time">
+        <!-- htmx will update here -->
+    </div>
+{{ end }}
